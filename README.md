@@ -8,7 +8,10 @@ A library to display loading spinners working seamlessly with Angular 2, 4, 5 an
 [![Build Status](https://travis-ci.org/tsmean/spinner.svg?branch=master)](https://travis-ci.org/tsmean/spinner)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://spinner.tsmean.com)
 [![npm](https://img.shields.io/npm/v/%40tsmean/spinner.svg)][npm-url]
-[![Support](https://img.shields.io/badge/Support-Angular%202%2B-blue.svg)]()
+[![Support](https://img.shields.io/badge/Support-Angular2-blue.svg)]()
+[![Support](https://img.shields.io/badge/Support-Angular4-blue.svg)]()
+[![Support](https://img.shields.io/badge/Support-Angular5-blue.svg)]()
+[![Support](https://img.shields.io/badge/Support-Angular6-blue.svg)]()
 
 
 ## Table of contents

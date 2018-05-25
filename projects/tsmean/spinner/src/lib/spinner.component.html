@@ -1,0 +1,9 @@
+<div *ngIf="display === 'inline'"
+     [ngStyle]="inlineStyles"
+     class="spinner spinner-inline">
+</div>
+<div *ngIf="!display || display === 'block'" class="spinner-block-wrapper">
+    <div class="spinner spinner-block"
+         [ngStyle]="blockStyles">
+    </div>
+</div>

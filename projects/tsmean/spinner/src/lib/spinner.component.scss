@@ -1,0 +1,33 @@
+.spinner {
+
+  border-style: solid;
+
+  border-width: 6px;
+  width:        45px;
+  height:       45px;
+
+  border-color: #434343;
+  border-top-color: transparent;
+
+  border-radius: 50%;
+  animation: spin 1.5s linear infinite;
+}
+
+.spinner-inline {
+  display: inline-block;
+}
+
+.spinner-block {
+  display: block;
+  text-align: center;
+}
+
+.spinner-block-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

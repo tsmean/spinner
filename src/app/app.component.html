@@ -1,1 +1,211 @@
-<lib-spinner></lib-spinner>
+<div class="app-wrapper-outer">
+    <div class="app-wrapper-inner main-shadow">
+        <h1>
+            Angular Spinner Library
+        </h1>
+        <p>
+            This library helps you with your loading spinner.
+        </p>
+        <div class="spinner-line">
+      <span class="spinner-line-spinner-wrapper" *ngFor="let spinner of spinners" style="font-size: 25px">
+        <spinner display="inline"
+                 color="#309488"
+                 [animation]="myAnimation">
+        </spinner>
+      </span>
+        </div>
+        <h2>
+            Why this spinner library?
+        </h2>
+        <ul>
+            <li>Simple</li>
+            <li>Good defaults, yet customizable</li>
+            <li><b>Block</b> and <b>inline</b> supported</li>
+            <li>When displayed inline, the spinner <b>adapts the font-size</b></li>
+            <li><b>Themable colors</b></li>
+            <li><b>Customizable animations</b></li>
+            <li>Works smoothly Internet Explorer, Safari, Chrome, Firefox and Opera</li>
+        </ul>
+
+        <h2>
+            Installation
+        </h2>
+
+        <p>
+            You can get the library with:
+        </p>
+
+        <pre>npm install spinner-angular</pre>
+
+        <p>
+            In your <code>app.module.ts</code> use:
+        </p>
+
+        <pre>@NgModule(&#123;
+declarations: [AppComponent],
+imports: [
+  <span style="color: gray">... // some other imports</span>
+  SpinnerModule.forRoot(&#123;&#125;)
+]</pre>
+
+        <p>
+            And in your HTML:
+        </p>
+        <pre>&lt;spinner&gt;&lt;/spinner&gt;</pre>
+
+        <p>
+            This should result in:
+        </p>
+        <spinner></spinner>
+
+        <h2>Customization</h2>
+
+        <p>
+            While you can use this library out of the box, you might want to customize it.
+        </p>
+
+        <h3>
+            Colors
+        </h3>
+
+        <p>
+            You can define two colors for your spinner when you set up the app:
+        </p>
+
+        <div class="boxybox">
+            <div *ngFor="let color of colors" style="text-align: center">
+                <spinner [color]="color.name">
+                </spinner>
+                <div>
+                    <code style="font-size: 12px; line-height: 1.2">&lt;spinner color="{{color.name}}"&gt;&lt;/spinner&gt;</code>
+                </div>
+            </div>
+        </div>
+
+        <pre>SpinnerModule.forRoot(&#123;
+  primaryColor: '#FCBE41',
+  secondaryColor: '#309488'
+&#125;)</pre>
+
+        <p>
+            You can also input a color directly into the spinner.
+        </p>
+        <div class="boxybox">
+            <div style="text-align: center">
+                <spinner color="#ff0000">
+                </spinner>
+                <div>
+                    <div>
+                        <code style="font-size: 12px; line-height: 1.2">&lt;spinner color="#ff0000"&gt;&lt;/spinner&gt;</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>
+            However, to stay consistent with your color scheme I'd recommend the other option.
+        </p>
+        <p>
+            If you don't specify a color, the spinner will detect the current font-color and use that:
+        </p>
+        <p style="text-align: center;">
+            <span style="color: #F728FC">Hello <spinner display="inline"></spinner></span>
+            <br>
+
+            <code style="font-size: 12px; line-height: 1.2">
+                {{codeSnippet('inlineColor')}}
+            </code>
+        </p>
+
+        <h3>Inline / Block</h3>
+
+        <p>
+            If you're waiting for a whole section to load, you usually want a large, centered, block format spinner:
+        </p>
+
+        <spinner></spinner>
+
+        <div style="text-align: center">
+            <p>
+                <code style="font-size: 12px; line-height: 1.2">&lt;spinner&gt;&lt;/spinner&gt;</code>
+            </p>
+        </div>
+
+        <p>
+            If you're waiting for a button click to finish, you usually want an inline spinner matching
+            the font-size and text color of the button:
+        </p>
+
+        <div style="text-align: center">
+            <button style="background: #FCBE41; color: white">
+                <span>Loading</span>
+                <spinner display="inline"></spinner>
+            </button>
+        </div>
+        <div>
+            <pre>{{codeSnippet('button')}}</pre>
+        </div>
+
+        <h3>
+            Animation
+        </h3>
+
+        <p>
+            If the default spinner animation is too boring for you, simply use a different animation:
+        </p>
+
+        <spinner [animation]="myAnimation" color="primary"></spinner>
+
+        <p>
+            To set it globally (best for consistency across app):
+        </p>
+        <pre>{{codeSnippet('animationRoot')}}</pre>
+
+        <p>
+            You can also set it locally for a single spinner:
+        </p>
+
+        <pre>{{codeSnippet('animation')}}</pre>
+        where <code>myAnimation</code> is
+        <pre>{{myAnimation}}</pre>
+
+        <p>
+            Let's see another example:
+        </p>
+
+        <div class="boxybox">
+            <div *ngFor="let animation of animationExamples" style="text-align: center">
+                <div>
+                    <spinner color="primary" [animation]="animation.animation"></spinner>
+                </div>
+                <div>
+                    <code style="font-size: 12px">&lt;spinner [animation]="{{animation.animation}}"&gt;&lt;/spinner&gt;</code>
+                </div>
+            </div>
+        </div>
+
+        <p>
+            Here, <code>spin</code> are spinner-internal css keyframes:
+        </p>
+
+        <pre>{{codeSnippet('keyframes')}}</pre>
+
+        <h3>Sizes</h3>
+
+        <p>
+            If you need to change the size of the spinner, that's also easy:
+        </p>
+
+        <div class="boxybox">
+            <div *ngFor="let size of sizes" style="text-align: center">
+                <div>
+                    <spinner [size]="size.size" color="secondary"></spinner>
+                </div>
+                <div>
+                    <code style="font-size: 12px">&lt;spinner [size]="{{size.size}}"&gt;&lt;/spinner&gt;</code>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

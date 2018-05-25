@@ -10,7 +10,10 @@ import {SpinnerModule} from '@tsmean/spinner';
   ],
   imports: [
     BrowserModule,
-    SpinnerModule
+    SpinnerModule.forRoot({
+      primaryColor: '#FCBE41',
+      secondaryColor: '#309488'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

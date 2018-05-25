@@ -77,7 +77,8 @@ http://spinner.tsmean.com/.
 
 ## Browser Support
 
-Chrome | IE 10+ | Edge | Safari | Firefox | Opera
+| Chrome | IE 10+ | Edge | Safari | Firefox | Opera |
+|--------|--------|------|--------|---------|-------|
 
 Also working on mobile devices (Android and iOS).
 

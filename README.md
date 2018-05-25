@@ -63,7 +63,7 @@ export class AppModule { }
 ```
 Then use the spinner either in block format
 ```html
-<spinner></spinner>
+<spinner color="primary"></spinner>
 ```
 
 or inline

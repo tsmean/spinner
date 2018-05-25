@@ -120,6 +120,46 @@
           }
         }
       }
+    },
+    "@tsmean/spinner": {
+      "root": "projects/tsmean/spinner",
+      "sourceRoot": "projects/tsmean/spinner/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/tsmean/spinner/tsconfig.lib.json",
+            "project": "projects/tsmean/spinner/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/tsmean/spinner/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/tsmean/spinner/src/test.ts",
+            "tsConfig": "projects/tsmean/spinner/tsconfig.spec.json",
+            "karmaConfig": "projects/tsmean/spinner/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/tsmean/spinner/tsconfig.lib.json",
+              "projects/tsmean/spinner/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "spinner-library"

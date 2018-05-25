@@ -3,7 +3,7 @@
   <h1 align="center">@tsmean/spinner</h1>
 </p>
 
-A library to display loading spinners working seamlessly with Angular 2, 4, 5 and 6. ([http://spinner.tsmean.com](http://spinner.tsmean.com))
+A library to display loading spinners, working seamlessly with Angular 2, 4, 5 and 6. ([http://spinner.tsmean.com](http://spinner.tsmean.com))
 
 [![Build Status](https://travis-ci.org/tsmean/spinner.svg?branch=master)](https://travis-ci.org/tsmean/spinner)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://spinner.tsmean.com)
@@ -77,9 +77,10 @@ http://spinner.tsmean.com/.
 
 ## Browser Support
 
-![Chrome](http://icons.iconarchive.com/icons/google/chrome/48/Google-Chrome-icon.png) | ![Firefox](https://support.cdn.mozilla.net/static/sumo/img/favicon.ico) | ![IE](https://www.msccruises.co.uk/wcsstore/MSCB2CStoreFrontAssetStore//images/icon_ie.png) | ![Safari](https://aplweb.sercomtel.com.br/sistemas/areaCliente/img/logoSafari.png) | ![Opera](https://www.webcomponents.org/assets/opera.png)
---- | --- | --- | --- | --- |
-Latest ✔ | Latest ✔ | 10+ ✔ | Latest ✔ | Latest ✔ |
+Chrome | IE 10+ | Edge | Safari | Firefox | Opera
+
+Also working on mobile devices (Android and iOS).
+
 
 ## Versioning
 

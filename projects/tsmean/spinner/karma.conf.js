@@ -24,7 +24,7 @@ module.exports = function (config) {
     },
     customLaunchers: {
       CustomChromeHeadless: {
-        base: 'CustomChromeHeadless',
+        base: 'ChromeHeadless',
         flags: isDocker ? ['--no-sandbox'] : []
       }
     },

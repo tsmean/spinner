@@ -24,7 +24,7 @@ A library to display loading spinners, working seamlessly with Angular 2, 4, 5 a
 
 [Working Demo](http://spinner.tsmean.com)
 
-or edit directly Stackblitz:
+or edit directly on Stackblitz:
 
 https://stackblitz.com/edit/tsmean-spinner
 
@@ -77,6 +77,7 @@ http://spinner.tsmean.com/.
 
 ## Browser Support
 
+
 | Chrome | IE 10+ | Edge | Safari | Firefox | Opera |
 |--------|--------|------|--------|---------|-------|
 
@@ -96,19 +97,6 @@ For more information on SemVer, please visit http://semver.org.
 ## License
 
 #### The MIT License (MIT)
-
-
-
-# @tsmean/spinner
-
-A customizable yet simple library for loading spinners working for Angular 2, Angular 4, Angular 5 and Angular 6. Here's one out of many ways how you could make it look like:
-
-<img height="100" width="100" src="https://s3.eu-central-1.amazonaws.com/bersling/images/spinner3.gif">
-
-## Installation & Demo
-
-The spinner library is best demonstrated in a small Angular app:
-
 
 
 [npm-url]: https://www.npmjs.com/package/@tsmean/spinner

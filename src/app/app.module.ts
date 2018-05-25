@@ -3,16 +3,18 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {SpinnerModule} from '@tsmean/spinner';
+import { GithubLinkComponent } from './github-link/github-link.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GithubLinkComponent
   ],
   imports: [
     BrowserModule,
     SpinnerModule.forRoot({
-      primaryColor: '#FCBE41',
-      secondaryColor: '#309488'
+      primaryColor: '#3F51B5',
+      secondaryColor: '#FCBE41'
     })
   ],
   providers: [],

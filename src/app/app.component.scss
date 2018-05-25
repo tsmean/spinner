@@ -1,3 +1,5 @@
+@import '../variables.scss';
+
 .app-wrapper-inner {
   background: white;
   padding: 40px 20px;
@@ -32,30 +34,12 @@
 
 .app-wrapper-outer {
   padding: 10px;
-  background: lightblue;
+  background: $primary;
   font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   line-height: 1.61;
 }
 
 .main-shadow {
-  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
-}
-
-pre {
-  background: #eeeeee;
-  border-radius: 2px;
-  padding: 10px;
-  font-size: 16px;
-  overflow: auto;
-}
-
-button {
-  cursor: pointer;
-  font-size: 18px;
-  padding:7px 10px;
-  border-radius: 2px;
-  background: white;
-  border: none;
   box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
 }

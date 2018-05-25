@@ -1,5 +1,6 @@
 <div class="app-wrapper-outer">
     <div class="app-wrapper-inner main-shadow">
+        <app-github-link></app-github-link>
         <h1>
             Angular Spinner Library
         </h1>
@@ -9,7 +10,7 @@
         <div class="spinner-line">
       <span class="spinner-line-spinner-wrapper" *ngFor="let spinner of spinners" style="font-size: 25px">
         <spinner display="inline"
-                 color="#309488"
+                 color="primary"
                  [animation]="myAnimation">
         </spinner>
       </span>
@@ -137,7 +138,7 @@ imports: [
 
         <div style="text-align: center">
             <button style="background: #FCBE41; color: white">
-                <span>Loading</span>
+                <span>Loading</span>&nbsp;
                 <spinner display="inline"></spinner>
             </button>
         </div>
@@ -204,6 +205,11 @@ imports: [
                     <code style="font-size: 12px">&lt;spinner [size]="{{size.size}}"&gt;&lt;/spinner&gt;</code>
                 </div>
             </div>
+        </div>
+
+        <br>
+        <div style="text-align: center">
+            <app-github-link></app-github-link>
         </div>
 
     </div>

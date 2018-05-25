@@ -8,3 +8,7 @@ node_js:
 script:
   - docker build -t tsmean-spinner -f ./docker/travis.dockerfile .
   - docker run tsmean-spinner npm test
+
+branches:
+  only:
+    - "master"

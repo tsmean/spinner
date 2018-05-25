@@ -41,4 +41,19 @@ describe('SpinnerComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should display the block view by default', () => {
+    expect(fixture.nativeElement.querySelector('.spinner-inline')).toBeNull();
+    expect(fixture.nativeElement.querySelector('.spinner-block')).not.toBeNull();
+  });
+
+  it('should display inline, if inline is selected', () => {
+    component.display = 'inline';
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('.spinner-inline')).not.toBeNull();
+    expect(fixture.nativeElement.querySelector('.spinner-block')).toBeNull();
+  });
+
+
+
 });

@@ -1,2 +1,2 @@
 import {InjectionToken} from '@angular/core';
-export const SPINNER_CONSTANTS = new InjectionToken('SPINNER_CONSTANTS');
+export const SPINNER_SETTINGS_TOKEN = new InjectionToken('SPINNER_SETTINGS_TOKEN');

@@ -1,11 +1,20 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { SpinnerService } from './spinner.service';
+import {SpinnerSettings} from './spinner-settings.interface';
+import {SPINNER_SETTINGS_TOKEN} from './constants';
+
+const SpinnerSettingsMock: SpinnerSettings = {
+  primaryColor: 'red'
+};
 
 describe('SpinnerService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [SpinnerService]
+      providers: [
+        {provide: SPINNER_SETTINGS_TOKEN, useValue: SpinnerSettingsMock},
+        SpinnerService
+      ]
     });
   });
 

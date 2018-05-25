@@ -1,8 +1,8 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
 import { SpinnerComponent } from './spinner.component';
-import {SpinnerConstants} from './spinner-constants.interface';
+import {SpinnerSettings} from './spinner-settings.interface';
 import {SpinnerService} from './spinner.service';
-import {SPINNER_CONSTANTS} from './constants';
+import {SPINNER_SETTINGS_TOKEN} from './constants';
 import {CommonModule} from '@angular/common';
 
 @NgModule({
@@ -13,13 +13,13 @@ import {CommonModule} from '@angular/common';
   exports: [SpinnerComponent]
 })
 export class SpinnerModule {
-  static forRoot(spinnerConstants: SpinnerConstants): ModuleWithProviders {
+  static forRoot(spinnerSettings: SpinnerSettings): ModuleWithProviders {
     return {
       ngModule: SpinnerModule,
       providers: [
         {
-          provide: SPINNER_CONSTANTS,
-          useValue: spinnerConstants
+          provide: SPINNER_SETTINGS_TOKEN,
+          useValue: spinnerSettings
         },
         SpinnerService
       ]

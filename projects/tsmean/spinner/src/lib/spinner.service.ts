@@ -1,24 +1,20 @@
 import {Inject, Injectable} from '@angular/core';
-import {SPINNER_CONSTANTS} from './constants';
-import {SpinnerConstants} from './spinner-constants.interface';
+import {SPINNER_SETTINGS_TOKEN} from './constants';
+import {SpinnerSettings} from './spinner-settings.interface';
 
 @Injectable()
 export class SpinnerService {
 
-  private _spinnerState: SpinnerConstants;
+  private _spinnerSettings: SpinnerSettings;
 
   constructor(
-    @Inject(SPINNER_CONSTANTS) private spinnerConstants: SpinnerConstants
+    @Inject(SPINNER_SETTINGS_TOKEN) private spinnerSettings: SpinnerSettings
   ) {
-    this._spinnerState = spinnerConstants;
+    this._spinnerSettings = spinnerSettings;
   }
 
-  get spinnerState(): SpinnerConstants {
-    return this._spinnerState;
-  }
-
-  set spinnerState(value: SpinnerConstants) {
-    this._spinnerState = value;
+  get spinnerState(): SpinnerSettings {
+    return this._spinnerSettings;
   }
 
 }

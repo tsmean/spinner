@@ -16,16 +16,6 @@ export class SpinnerComponent implements OnInit, OnChanges {
   inlineStyles: SpinnerStyles = {};
   blockStyles: SpinnerStyles = {};
 
-  calculateSizes(size: number) {
-    const borderWidth = Math.ceil(size / 7);
-    const widthAndHeight = Math.ceil(size);
-    return {
-      width: widthAndHeight + 'px',
-      height: widthAndHeight + 'px',
-      'border-width': borderWidth + 'px'
-    };
-  }
-
   constructor(private elementRef: ElementRef,
               private spinnerService: SpinnerService) {
   }
@@ -36,7 +26,32 @@ export class SpinnerComponent implements OnInit, OnChanges {
     this.setAnimation(this.animation);
   }
 
-  setColor(newColor: string | undefined) {
+  ngOnChanges(changes: SimpleChanges) {
+    const colorChange: SimpleChange = changes.color;
+    if (colorChange) {
+      this.setColor(colorChange.currentValue);
+    }
+    const animationChange: SimpleChange = changes.animation;
+    if (animationChange) {
+      this.setAnimation(animationChange.currentValue);
+    }
+    const sizeChange: SimpleChange = changes.size;
+    if (sizeChange) {
+      this.setSize(sizeChange.currentValue);
+    }
+  }
+
+  private calculateSizes(size: number) {
+    const borderWidth = Math.ceil(size / 7);
+    const widthAndHeight = Math.ceil(size);
+    return {
+      width: widthAndHeight + 'px',
+      height: widthAndHeight + 'px',
+      'border-width': borderWidth + 'px'
+    };
+  }
+
+  private setColor(newColor: string | undefined) {
     if (newColor) {
       const predefinedColors = ['primary', 'secondary'];
       let newColorIsPredefinedColor = false;
@@ -62,7 +77,7 @@ export class SpinnerComponent implements OnInit, OnChanges {
     }
   }
 
-  setSize(newSize: number | undefined) {
+  private setSize(newSize: number | undefined) {
     if (newSize) {
       this.doForAllStyles(style => {
         Object.assign(style, this.calculateSizes(newSize));
@@ -80,7 +95,7 @@ export class SpinnerComponent implements OnInit, OnChanges {
     }
   }
 
-  setAnimation(newAnimation: string) {
+  private setAnimation(newAnimation: string) {
     this.doForAllStyles(style => {
       if (newAnimation) {
         style.animation = newAnimation;
@@ -90,22 +105,7 @@ export class SpinnerComponent implements OnInit, OnChanges {
     });
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-    const colorChange: SimpleChange = changes.color;
-    if (colorChange) {
-      this.setColor(colorChange.currentValue);
-    }
-    const animationChange: SimpleChange = changes.animation;
-    if (animationChange) {
-      this.setAnimation(animationChange.currentValue);
-    }
-    const sizeChange: SimpleChange = changes.size;
-    if (sizeChange) {
-      this.setSize(sizeChange.currentValue);
-    }
-  }
-
-  doForAllStyles(someFunction) {
+  private doForAllStyles(someFunction) {
     const allStyles = [this.inlineStyles, this.blockStyles];
     allStyles.forEach(style => someFunction(style));
   }

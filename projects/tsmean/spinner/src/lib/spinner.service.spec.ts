@@ -21,4 +21,9 @@ describe('SpinnerService', () => {
   it('should be created', inject([SpinnerService], (service: SpinnerService) => {
     expect(service).toBeTruthy();
   }));
+
+  it('should be able to get config', inject([SpinnerService], (service: SpinnerService) => {
+    expect(service.spinnerState).toEqual(SpinnerSettingsMock);
+  }));
+
 });

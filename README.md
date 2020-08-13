@@ -18,6 +18,7 @@ A library to display loading spinners, working seamlessly with Angular 2, 4, 5 a
 - [Usage](#usage)
 - [Browser Support](#browser-support)
 - [Versioning](#versioning)
+- [Contributing](#contributing)
 - [License](#license)
 
 ## Demo
@@ -92,6 +93,10 @@ Releases will be numbered with the following format:
 `<major>.<minor>.<patch>`
 
 For more information on SemVer, please visit http://semver.org.
+
+## Contributing
+
+If you're a developer and you'd like to contribute, your go-to readme is the `README.dev.md`.
 
 
 ## License

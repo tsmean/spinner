@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "spinner-library": {
+    "spinner-project": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/spinner-library",
+            "outputPath": "dist/spinner-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -54,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "spinner-library:build"
+            "browserTarget": "spinner-project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "spinner-library:build:production"
+              "browserTarget": "spinner-project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "spinner-library:build"
+            "browserTarget": "spinner-project:build"
           }
         },
         "test": {
@@ -99,7 +99,7 @@
         }
       }
     },
-    "spinner-library-e2e": {
+    "spinner-project-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -107,7 +107,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "spinner-library:serve"
+            "devServerTarget": "spinner-project:serve"
           }
         },
         "lint": {
@@ -162,5 +162,5 @@
       }
     }
   },
-  "defaultProject": "spinner-library"
+  "defaultProject": "spinner-project"
 }

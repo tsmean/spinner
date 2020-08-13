@@ -1,5 +1,5 @@
 {
-  "name": "spinner-library",
+  "name": "spinner-project",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,13 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "watch-spinner": "ng build @tsmean/spinner --watch",
+    "build-spinner": "ng build @tsmean/spinner",
+    "publish-spinner": "cd dist/tsmean/spinner && npm publish",
+    "publish-spinner-beta": "cd dist/tsmean/spinner && npm publish --tag beta",
+    "build-and-publish-spinner": "npm run build-spinner && npm run publish-spinner",
+    "build-and-publish-spinner-beta": "npm run build-spinner && npm run publish-spinner-beta"
   },
   "private": true,
   "dependencies": {

@@ -25,6 +25,7 @@
 .spinner-block-wrapper {
   display: flex;
   justify-content: center;
+  overflow: hidden; // prevent scrollbar bug (https://stackblitz.com/edit/spinner-test)
 }
 
 @keyframes spin {

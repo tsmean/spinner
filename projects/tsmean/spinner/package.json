@@ -1,8 +1,4 @@
 {
   "name": "@tsmean/spinner",
-  "version": "1.0.1",
-  "peerDependencies": {
-    "@angular/common": "^2.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0",
-    "@angular/core": "^2.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0"
-  }
+  "version": "1.0.3"
 }

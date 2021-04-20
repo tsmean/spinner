@@ -9,7 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "watch-spinner": "ng build @tsmean/spinner --watch",
-    "build-spinner": "ng build @tsmean/spinner",
+    "build-spinner": "ng build @tsmean/spinner --prod",
     "publish-spinner": "cd dist/tsmean/spinner && npm publish",
     "publish-spinner-beta": "cd dist/tsmean/spinner && npm publish --tag beta",
     "build-and-publish-spinner": "npm run build-spinner && npm run publish-spinner",

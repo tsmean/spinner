@@ -3,7 +3,7 @@
   <h1 align="center">@tsmean/spinner</h1>
 </p>
 
-A library to display loading spinners, working seamlessly with Angular 2, 4, 5 and 6. ([http://spinner.tsmean.com](http://spinner.tsmean.com))
+A library to display loading spinners, working seamlessly with Angular 2, 4, 5, 6, 7, 8, 9, 10, 11. ([http://spinner.tsmean.com](http://spinner.tsmean.com))
 
 [![Build Status](https://travis-ci.org/tsmean/spinner.svg?branch=master)](https://travis-ci.org/tsmean/spinner)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](http://spinner.tsmean.com)

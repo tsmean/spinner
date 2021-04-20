@@ -13,7 +13,7 @@ import {CommonModule} from '@angular/common';
   exports: [SpinnerComponent]
 })
 export class SpinnerModule {
-  static forRoot(spinnerSettings: SpinnerSettings): ModuleWithProviders {
+  static forRoot(spinnerSettings: SpinnerSettings): ModuleWithProviders<SpinnerModule> {
     return {
       ngModule: SpinnerModule,
       providers: [

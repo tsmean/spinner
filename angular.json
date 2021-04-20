@@ -135,7 +135,7 @@
           },
           "configurations": {
             "production": {
-              "project": "projects/tsmean/spinner/ng-package.prod.json"
+              "tsConfig": "projects/tsmean/spinner/tsconfig.lib.prod.json"
             }
           }
         },

@@ -22,7 +22,6 @@
     "@angular/compiler": "^11.2.10",
     "@angular/core": "^11.2.10",
     "@angular/forms": "^11.2.10",
-    "@angular/http": "^6.0.3",
     "@angular/platform-browser": "^11.2.10",
     "@angular/platform-browser-dynamic": "^11.2.10",
     "@angular/router": "^11.2.10",
